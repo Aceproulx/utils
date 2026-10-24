@@ -1,0 +1,110 @@
+[
+  {
+    "id": "p:1",
+    "name": "No Images",
+    "alias": "no-images",
+    "clause": "(req.ext.nlike:\"%.apng\" AND req.ext.nlike:\"%.avif\" AND req.ext.nlike:\"%.gif\" AND req.ext.nlike:\"%.jpg\" AND req.ext.nlike:\"%.jpeg\" AND req.ext.nlike:\"%.pjpeg\" AND req.ext.nlike:\"%.pjp\" AND req.ext.nlike:\"%.png\" AND req.ext.nlike:\"%.svg\" AND req.ext.nlike:\"%.webp\" AND req.ext.nlike:\"%.bmp\" AND req.ext.nlike:\"%.ico\" AND req.ext.nlike:\"%.cur\" AND req.ext.nlike:\"%.tif\" AND req.ext.nlike:\"%.tiff\")"
+  },
+  {
+    "id": "p:2",
+    "name": "No Styling",
+    "alias": "no-styling",
+    "clause": "(req.ext.nlike:\"%.css\" AND req.ext.nlike:\"%.woff\" AND req.ext.nlike:\"%.woff2\" AND req.ext.nlike:\"%.ttf\" AND req.ext.nlike:\"%.eot\")"
+  },
+  {
+    "id": "g:1",
+    "name": "NoJs",
+    "alias": "nojs",
+    "clause": "req.path.ncont:\".js\""
+  },
+  {
+    "id": "g:2",
+    "name": "gf-redirect",
+    "alias": "redirect",
+    "clause": "req.query.regex:\"(?i)(Lmage_url=|Open=|callback=|cgi-bin\\/redirect.cgi|checkout=|checkout_url=|continue=|data=|dest=|destination=|dir=|domain=|feed=|file=|file_name=|file_url=|folder=|folder_url=|forward=|from_url=|go=|goto=|host=|html=|image_url=|img_url=|load_file=|load_url=|login_url=|logout=|navigation=|next=|next_page=|out=|page=|page_url=|path=|port=|redir=|redirect=|redirect_to=|redirect_uri=|redirect_url=|reference=|return=|returnTo=|return_path=|return_to=|return_url=|rt=|rurl=|show=|site=|target=|to=|uri=|url=|val=|validate=|view=|window=)\" OR req.path.regex:\"(?i)cgi-bin\\/redirect.cgi\""
+  },
+  {
+    "id": "g:3",
+    "name": "gf-interestingparams",
+    "alias": "iparams",
+    "clause": "req.query.regex:\"(?i)(template=|preview=|id=|view=|activity=|name=|content=|redirect=|[&?]access[&=]|[&?]admin[&=]|[&?]dbg[&=]|[&?]debug[&=]|[&?]edit[&=]|[&?]grant[&=]|[&?]test[&=]|[&?]alter[&=]|[&?]clone[&=]|[&?]create[&=]|[&?]delete[&=]|[&?]disable[&=]|[&?]enable[&=]|[&?]exec[&=]|[&?]execute[&=]|[&?]load[&=]|[&?]make[&=]|[&?]modify[&=]|[&?]rename[&=]|[&?]reset[&=]|[&?]shell[&=]|[&?]toggle[&=]|[&?]adm[&=]|[&?]root[&=]|[&?]cfg[&=]|[&?]dest[&=]|[&?]redirect[&=]|[&?]uri[&=]|[&?]path[&=]|[&?]continue[&=]|[&?]url[&=]|[&?]window[&=]|[&?]next[&=]|[&?]data[&=]|[&?]reference[&=]|[&?]site[&=]|[&?]html[&=]|[&?]val[&=]|[&?]validate[&=]|[&?]domain[&=]|[&?]callback[&=]|[&?]return[&=]|[&?]feed[&=]|[&?]host[&=]|[&?]port[&=]|[&?]to[&=]|[&?]out[&=]|[&?]view[&=]|[&?]dir[&=]|[&?]show[&=]|[&?]navigation[&=]|[&?]open[&=]|[&?]file[&=]|[&?]document[&=]|[&?]folder[&=]|[&?]pg[&=]|[&?]php_path[&=]|[&?]style[&=]|[&?]doc[&=]|[&?]img[&=]|[&?]filename[&=]|id=|select=|report=|role=|update=|query=|user=|name=|sort=|where=|search=|params=|process=|row=|view=|table=|from=|sel=|results=|sleep=|fetch=|order=|keyword=|column=|field=|delete=|string=|number=|filter=|[&?]callback=|[&?]cgi-bin\\/redirect.cgi|[&?]checkout=|[&?]checkout_url=|[&?]continue=|[&?]data=|[&?]dest=|[&?]destination=|[&?]dir=|[&?]domain=|[&?]feed=|[&?]file=|[&?]file_name=|[&?]file_url=|[&?]folder=|[&?]folder_url=|[&?]forward=|[&?]from_url=|[&?]go=|[&?]goto=|[&?]host=|[&?]html=|[&?]image_url=|[&?]img_url=|[&?]load_file=|[&?]load_url=|[&?]login_url=|[&?]logout=|[&?]navigation=|[&?]next=|[&?]next_page=|[&?]Open=|[&?]out=|[&?]page_url=|[&?]path=|[&?]port=|[&?]redir=|[&?]redirect=|[&?]redirect_to=|[&?]redirect_uri=|[&?]redirect_url=|[&?]reference=|[&?]return=|[&?]return_path=|[&?]return_to=|[&?]returnTo=|[&?]return_url=|[&?]rt=|[&?]rurl=|[&?]show=|[&?]site=|[&?]target=|[&?]to=|[&?]uri=|[&?]url=|[&?]val=|[&?]validate=|[&?]view=|[&?]window=|daemon=|upload=|dir=|execute=|download=|log=|ip=|cli=|cmd=|file=|document=|folder=|root=|path=|pg=|style=|pdf=|template=|php_path=|doc=|page=|name=|id=|user=|account=|number=|order=|no=|doc=|key=|email=|group=|profile=|edit=|report=|access=|admin=|dbg=|debug=|edit=|grant=|test=|alter=|clone=|create=|delete=|disable=|enable=|exec=|execute=|load=|make=|modify=|rename=|reset=|shell=|toggle=|adm=|root=|cfg=|config=)\""
+  },
+  {
+    "id": "g:4",
+    "name": "gf-xss",
+    "alias": "xss",
+    "clause": "req.query.regex:\"(?i)(q=|s=|search=|lang=|keyword=|query=|page=|keywords=|year=|view=|email=|type=|name=|p=|callback=|jsonp=|api_key=|api=|password=|email=|emailto=|token=|username=|csrf_token=|unsubscribe_token=|id=|item=|page_id=|month=|immagine=|list_type=|url=|terms=|categoryid=|key=|l=|begindate=|enddate=)\""
+  },
+  {
+    "id": "g:5",
+    "name": "gf-ssti",
+    "alias": "ssti",
+    "clause": "req.query.regex:\"(?i)(template=|preview=|id=|view=|activity=|name=|content=|redirect=)\""
+  },
+  {
+    "id": "g:6",
+    "name": "gf-sqli",
+    "alias": "sqli",
+    "clause": "req.query.regex:\"(?i)(id=|select=|report=|role=|update=|query=|user=|name=|sort=|where=|search=|params=|process=|row=|view=|table=|from=|sel=|results=|sleep=|fetch=|order=|keyword=|column=|field=|delete=|user=|string=|number=|category=|filter=)\""
+  },
+  {
+    "id": "g:7",
+    "name": "gf-idor",
+    "alias": "idor",
+    "clause": "req.query.regex:\"(?i)(id=|user=|account=|number=|order=|no=|doc=|key=|email=|group=|profile=|edit=|report=)\""
+  },
+  {
+    "id": "g:8",
+    "name": "gf-ssrf",
+    "alias": "ssrf",
+    "clause": "req.query.regex:\"(?i)(access=|admin=|dbg=|debug=|edit=|grant=|test=|alter=|clone=|create=|delete=|disable=|enable=|exec=|execute=|load=|make=|modify=|rename=|reset=|shell=|toggle=|adm=|root=|cfg=|dest=|redirect=|uri=|path=|continue=|url=|window=|next=|data=|reference=|site=|html=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|to=|out=|view=|dir=|show=|navigation=|open=|file=|document=|folder=|pg=|php_path=|style=|doc=|img=|filename=)\""
+  },
+  {
+    "id": "g:9",
+    "name": "middleware",
+    "alias": "middleware",
+    "clause": "req.path.regex:\"(?i)(media|images|image|static|assets|docs|download|downloads|files|file|content|cdn|proxy|uploads)\""
+  },
+  {
+    "id": "g:10",
+    "name": "text-plain",
+    "alias": "text-plain",
+    "clause": "req.header[\"Content-type\"].cont:\"text/plain\""
+  },
+  {
+    "id": "g:11",
+    "name": "cache-oracle",
+    "alias": "new-preset",
+    "clause": "(resp.header.name.cont:\"cache\" or resp.header.name.cont:\"age\" or resp.header.name.cont:\"x-cache\" or resp.header.name.cont:\"cf-cache-status\" or resp.header.name.cont:\"x-served-by\" or resp.header.name.cont:\"x-vercel-cache\" or resp.header.name.cont:\"x-nextjs-cache\") and resp.header.value.ncont:\"no-store\" and resp.header.value.ncont:\"private\" and resp.header.name.ncont:\"set-cookie\""
+  },
+  {
+    "id": "g:12",
+    "name": "OAuth flow (moonpig + Google consent/auth)",
+    "alias": "oauth-flow",
+    "clause": "req.host.cont:\"moonpig\" OR (req.path.cont:\"/signin/oauth/v3/consent\" AND resp.header[\"location\"].ncont:\"https://accounts.google.com/\") OR req.path.cont:\"/o/oauth2/v2/auth\""
+  },
+  {
+    "id": "g:13",
+    "name": "rce",
+    "alias": "rce",
+    "clause": "req.query.regex:\"(?i)(daemon=|upload=|dir=|download=|log=|ip=|cli=|cmd=|exec=|command=|execute=|ping=|query=|jump=|code=|reg=|do=|func=|arg=|option=|load=|process=|step=|read=|function|req=|feature=|exe=|module=|payload=|run=|print=)\""
+  },
+  {
+    "id": "g:14",
+    "name": "nowaf-resp",
+    "alias": "nowaf-resp",
+    "clause": "resp.body.ncont:\"Sorry, you have been blocked\" AND resp.body.ncont:\"Request blocked\""
+  },
+  {
+    "id": "g:16",
+    "name": "gf-cors",
+    "alias": "cr",
+    "clause": "resp.header.name.eq:\"Access-Control\""
+  },
+  {
+    "id": "g:17",
+    "name": "curl-to-caido",
+    "alias": "curl-to-caido",
+    "clause": "req.header.name.eq:\"X-Researcher\""
+  }
+]
